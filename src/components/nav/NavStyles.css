@@ -1,0 +1,10 @@
+header {
+  width: 100%;
+  padding: 16px 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
