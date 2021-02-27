@@ -1,9 +1,15 @@
 import React from 'react'
 import './assets/App.css';
 
+import Nav from './components/nav/Nav'
+import Footer from './components/footer/Footer'
+
+
 function App() {
   return (
-    <div className="App">
+    <div>
+      <Nav />
+      <Footer />
     </div>
   );
 }
