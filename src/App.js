@@ -1,5 +1,6 @@
 import React from 'react'
-import './assets/App.css';
+import './assets/App.less';
+import './assets/templateStyles.css'
 
 import Nav from './components/nav/Nav'
 import Footer from './components/footer/Footer'
