@@ -17,6 +17,7 @@ export default function SinglePost() {
     const [singlePost, setSinglePost] = useState(null)
     const { slug } = useParams()
 
+
     useEffect(() => {
         sanityClient.fetch(`*[slug.current == '${slug}']{
             title,
@@ -32,7 +33,9 @@ export default function SinglePost() {
             'name': author->name,
             'authorImage': author->image
         }`)
-            .then((data) => setSinglePost(data[0]))
+            .then((data) => {
+                setSinglePost(data[0])
+            })
             .catch(console.error)
     }, [slug])
 
@@ -48,7 +51,7 @@ export default function SinglePost() {
                         <div>
                             <h1>{singlePost.title}</h1>
                             <div>
-                                <img src={urlFor(singlePost.authorImage.url())} alt={singlePost.name} />
+                                <img src={urlFor(singlePost.authorImage).url()} alt={singlePost.name} />
                                 <p>{singlePost.name}</p>
                             </div>
                         </div>
