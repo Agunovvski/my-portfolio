@@ -7,3 +7,9 @@ section {
   width: 100%;
   padding: 16px;
 }
+
+/* antd styles override */
+
+.ant-card {
+  border-radius: 4px !important;
+}

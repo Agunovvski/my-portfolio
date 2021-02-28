@@ -4,7 +4,7 @@ import '../../assets/templateStyles.css'
 
 export default function Footer() {
     return (
-        <section>
+        <section className='footer-section'>
             <footer className='template-width'>
                 <p>Footer</p>
             </footer>

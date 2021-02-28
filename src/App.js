@@ -12,7 +12,7 @@ import Home from './pages/home/Home'
 import About from './pages/about/About'
 import Post from './pages/work/projects/Post'
 import SinglePost from './pages/work/projects/SinglePost'
-import Projects from './pages/work/projects/Projects'
+// import Projects from './pages/work/projects/Projects'
 import NotFound from './pages/NotFound';
 
 
@@ -22,7 +22,7 @@ function App() {
       <Nav />
       <Switch>
         <Route path='/' exact component={Home}></Route>
-        <Route path='/my-work' component={Projects}></Route>
+        {/* <Route path='/my-work' component={Projects}></Route> */}
         <Route path='/about' component={About}></Route>
         <Route path='/post/:slug' component={SinglePost}></Route>
         <Route path='/post' component={Post}></Route>
