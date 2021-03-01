@@ -6,7 +6,7 @@ import BlockContent from '@sanity/block-content-to-react'
 
 import './SinglePostStyles.css'
 
-import { Skeleton, Breadcrumb } from 'antd'
+import { Skeleton, Breadcrumb, Avatar, Image, Statistic, Divider } from 'antd'
 
 const builder = imageUrlBuilder(sanityClient)
 
@@ -25,6 +25,8 @@ export default function SinglePost() {
             title,
             _id,
             slug,
+            projectType,
+            releaseDate,
             mainImage{
                 asset->{
                     _id,
@@ -43,36 +45,58 @@ export default function SinglePost() {
 
 
     if (!singlePost)
-        return <Skeleton active='true' />
+        return (
+            <section>
+                <div className='template-width'>
+                    <Skeleton active='true' />
+                </div>
+            </section>
+        )
 
 
     return (
         <section>
             <div className='template-width'>
-                <header>
-                    <div>
-                        <div>
-                            <Breadcrumb>
-                                <Breadcrumb.Item>
-                                    <Link to='/'>Home</Link>
-                                </Breadcrumb.Item>
-                                <Breadcrumb.Item>
-                                    <Link to='/post'>My work</Link>
-                                </Breadcrumb.Item>
-                                <Breadcrumb.Item>
-                                    {singlePost.title}
-                                </Breadcrumb.Item>
-                            </Breadcrumb>
-                            <h1>{singlePost.title}</h1>
-                            <div>
-                                <img src={urlFor(singlePost.authorImage).url()} alt={singlePost.name} />
-                                <p>{singlePost.name}</p>
-                            </div>
+                <div className='singlepost-container'>
+                    <div className='metadata-container'>
+                        <Breadcrumb>
+                            <Breadcrumb.Item>
+                                <Link to='/'>Home</Link>
+                            </Breadcrumb.Item>
+                            <Breadcrumb.Item>
+                                <Link to='/post'>My work</Link>
+                            </Breadcrumb.Item>
+                            <Breadcrumb.Item>
+                                {singlePost.title}
+                            </Breadcrumb.Item>
+                        </Breadcrumb>
+                        <h1>{singlePost.title}</h1>
+                        <div className='singlepost-metadata'>
+                            <span>Written by {singlePost.name}</span>
+                            <Avatar src={urlFor(singlePost.authorImage).url()} alt={singlePost.name} />
                         </div>
-                        <img src={singlePost.mainImage.asset.url} alt={singlePost.title} />
                     </div>
-                </header>
-                <div>
+                    <div className='singlepost-mainImage'>
+                        <Image
+                            src={singlePost.mainImage.asset.url} alt={singlePost.title} />
+                    </div>
+                    <div className='singlepost-statistic'>
+                        <Statistic
+                            title='Project Type'
+                            value={singlePost.projectType}
+                        />
+                        <Statistic
+                            title='Project Date'
+                            value={singlePost.releaseDate}
+                        />
+                    </div>
+                </div>
+                <Divider
+                    style={{
+                        marginBottom: '64px'
+                    }}
+                />
+                <div className='singlepost-blockContent'>
                     <BlockContent blocks={singlePost.body} projectId='ispob9gx' dataset='production'></BlockContent>
                 </div>
             </div>

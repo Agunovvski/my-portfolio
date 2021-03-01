@@ -10,7 +10,7 @@ export default {
     },
     {
       name: 'slug',
-      title: 'Slug',
+      title: 'Slug (meta)',
       type: 'slug',
       options: {
         source: 'title',
@@ -19,22 +19,62 @@ export default {
     },
     {
       name: 'author',
-      title: 'Author',
+      title: 'Author (meta)',
       type: 'reference',
       to: { type: 'author' },
     },
     {
+      name: 'description',
+      title: 'Description (meta)',
+      type: 'text'
+    },
+    {
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Main image (meta)',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: 'projectType',
+      title: 'Project type (meta)',
+      type: 'string',
+      options: {
+        list: [
+          {
+            value: 'Personal',
+            title: 'Personal',
+          },
+          {
+            value: 'Client',
+            title: 'Client',
+          },
+          {
+            value: 'School',
+            title: 'School',
+          }
+        ]
+      }
+    },
+    {
+      name: 'releaseDate',
+      title: 'Release date (meta)',
+      type: 'date',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        calendarTodayLabel: 'Today'
+      }
+    },
+    {
+      name: 'imagesGallery',
+      title: 'Images gallery',
+      type: 'array',
+      of: [
+        {
+          type: 'image'
+        }
+      ]
     },
     {
       name: 'body',

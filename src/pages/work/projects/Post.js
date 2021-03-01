@@ -2,16 +2,20 @@ import React, { useState, useEffect } from 'react'
 import sanityClient from '../../../client.js'
 import { Link } from 'react-router-dom'
 import './PostStyles.css'
-import { Card, PageHeader } from 'antd'
+import { Card, Skeleton } from 'antd'
 
 export default function Post() {
 
     const [postData, setPostData] = useState(null)
+    const [cardLoad, setCardLoad] = useState(false)
 
     useEffect(() => {
+        setCardLoad(true)
         sanityClient.fetch(`*[_type == "post"]{
             title,
             slug,
+            description,
+            projectType,
             mainImage{
                 asset->{
                     _id,
@@ -20,29 +24,45 @@ export default function Post() {
                 alt
             }
         }`)
-            .then((data) => setPostData(data))
+            .then((data) => {
+                setPostData(data)
+                setCardLoad(false)
+            })
             .catch(console.error)
     }, [])
 
-    const { Meta } = Card;
+
+    if (!postData)
+        return (
+            <section>
+                <div className='template-width'>
+                    <div className='grid-projects'>
+                        <Skeleton active='true' />
+                        <Skeleton active='true' />
+                    </div>
+                </div>
+            </section>
+        )
+
+    // const { Meta } = Card;
 
     return (
         <section>
             <div className='template-width'>
-                <PageHeader
-                    title='Welcome to my projects'
-                ></PageHeader>
+                <h1>My work collection</h1>
                 <div className='grid-projects'>
                     {postData && postData.map((post, index) => (
                         <Link to={'/post/' + post.slug.current} key={post.slug.current}>
                             <Card
+                                loading={cardLoad}
+                                hoverable='true'
                                 cover={
                                     <img className='project-img' src={post.mainImage.asset.url} alt={post.mainImage.alt} />
                                 }
                             >
-                                <Meta
-                                    title={post.title}
-                                />
+                                <h2>{post.title}</h2>
+                                <span>{post.projectType}</span>
+                                <p>{post.description}</p>
                             </Card>
                         </Link>
                     ))
