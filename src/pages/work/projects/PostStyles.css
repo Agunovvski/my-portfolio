@@ -1,0 +1,14 @@
+.grid-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+}
+
+/* .grid-projects > article {
+  width: 100%;
+} */
+
+.project-img {
+  height: 320px;
+  width: 100%;
+}
