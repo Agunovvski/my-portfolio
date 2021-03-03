@@ -3,7 +3,7 @@ import sanityClient from '../../client.js'
 import '../../assets/templateStyles.css'
 import './HomeStyles.css'
 import ParticlesBg from "particles-bg";
-import { Image, Tooltip, Skeleton } from 'antd'
+import { Image, Tooltip, Skeleton, Timeline, Divider } from 'antd'
 import { Link } from 'react-router-dom'
 import MyPhoto from '../../assets/images/my-photo.png'
 import Project from '../../components/project-card/Project'
@@ -33,7 +33,7 @@ export default function Home() {
     }, [])
 
     return (
-        <section>
+        <section className='home-main-section'>
             <div className='template-width'>
                 <div className='home-fold home-section'>
                     <Tooltip
@@ -75,7 +75,16 @@ export default function Home() {
                 </div>
                 <div className='home-about home-section'>
                     <h2>About myself</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius sit amet sem vel aliquet. Nulla sapien est, cursus non dignissim nec, ullamcorper a mauris. Fusce ultrices velit ac nibh ornare, a ornare libero vestibulum. Nunc auctor nunc tellus, sit amet sodales ex finibus nec. Aenean cursus ipsum vel purus venenatis, volutpat suscipit leo mollis. Fusce consectetur metus et consectetur efficitur. Ut diam enim, posuere non odio vitae, venenatis interdum lectus.</p>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius sit amet sem vel aliquet. Nulla sapien est, cursus non dignissim nec, ullamcorper a mauris. Fusce ultrices velit ac nibh ornare, a ornare libero vestibulum. Nunc auctor nunc tellus, sit amet sodales ex finibus nec. Aenean cursus ipsum vel purus venenatis, volutpat suscipit leo mollis. Fusce consectetur metus et consectetur efficitur. Ut diam enim, posuere non odio vitae, venenatis interdum lectus.</p>
+                        <Divider />
+                        <Timeline>
+                            <Timeline.Item color='green'>Item 1</Timeline.Item>
+                            <Timeline.Item color='green'>Item 1</Timeline.Item>
+                            <Timeline.Item color='green'>Item 1</Timeline.Item>
+                            <Timeline.Item>Item 1</Timeline.Item>
+                        </Timeline>
+                    </div>
                 </div>
             </div>
             <ParticlesBg
