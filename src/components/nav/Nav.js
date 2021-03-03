@@ -11,14 +11,8 @@ export default function Nav() {
             <nav className='navigation template-width'>
                 <NavLink to='/'>Home</NavLink>
                 <div>
-                    {/* <Button type='link'>
-                        <NavLink to='/my-work'>My work</NavLink>
-                    </Button> */}
                     <Button type='link'>
                         <NavLink to='/post'>My work</NavLink>
-                    </Button>
-                    <Button type='link'>
-                        <NavLink to='/about'>About me</NavLink>
                     </Button>
                 </div>
             </nav>

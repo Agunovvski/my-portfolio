@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react'
 import sanityClient from '../../../client.js'
 import { Link } from 'react-router-dom'
 import './PostStyles.css'
-import { Card, Skeleton } from 'antd'
+import { Skeleton } from 'antd'
+import Project from '../../../components/project-card/Project'
 
 export default function Post() {
 
     const [postData, setPostData] = useState(null)
-    const [cardLoad, setCardLoad] = useState(false)
 
     useEffect(() => {
-        setCardLoad(true)
         sanityClient.fetch(`*[_type == "post"]{
             title,
             slug,
@@ -26,7 +25,6 @@ export default function Post() {
         }`)
             .then((data) => {
                 setPostData(data)
-                setCardLoad(false)
             })
             .catch(console.error)
     }, [])
@@ -44,8 +42,6 @@ export default function Post() {
             </section>
         )
 
-    // const { Meta } = Card;
-
     return (
         <section>
             <div className='template-width'>
@@ -53,17 +49,13 @@ export default function Post() {
                 <div className='grid-projects'>
                     {postData && postData.map((post, index) => (
                         <Link to={'/post/' + post.slug.current} key={post.slug.current}>
-                            <Card
-                                loading={cardLoad}
-                                hoverable='true'
-                                cover={
-                                    <img className='project-img' src={post.mainImage.asset.url} alt={post.mainImage.alt} />
-                                }
-                            >
-                                <h2>{post.title}</h2>
-                                <span>{post.projectType}</span>
-                                <p>{post.description}</p>
-                            </Card>
+                            <Project
+                                imgUrl={post.mainImage.asset.url}
+                                imgAlt={post.mainImage.alt}
+                                title={post.title}
+                                projectType={post.projectType}
+                                description={post.description}
+                            />
                         </Link>
                     ))
                     }

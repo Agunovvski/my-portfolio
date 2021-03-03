@@ -1,0 +1,57 @@
+.home-fold {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.home-fold > h1 {
+  font-size: 64px;
+  margin-left: 48px;
+}
+
+mark {
+  background-color: #177ddc;
+  font-weight: bold;
+}
+
+.home-section:first-of-type {
+  margin-top: 120px;
+  margin-bottom: 240px;
+}
+
+.home-section {
+  margin: 240px 0;
+  width: 100%;
+}
+
+.home-tooltip > div > div.ant-tooltip-inner {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 21px;
+}
+
+.home-projects,
+.home-about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.home-projects > h2,
+.home-about > h2 {
+  font-size: 32px;
+}
+
+.home-about > p {
+  font-size: 21px;
+  letter-spacing: -0.063px;
+  line-height: 32px;
+}
+
+.home-projects > div:first-of-type {
+  display: grid;
+  grid-gap: 24px;
+}
+
+.home-about {
+  margin-bottom: 0;
+}

@@ -72,7 +72,7 @@ export default function SinglePost() {
                         </Breadcrumb>
                         <h1>{singlePost.title}</h1>
                         <div className='singlepost-metadata'>
-                            <span>Written by {singlePost.name}</span>
+                            <span> by {singlePost.name}</span>
                             <Avatar src={urlFor(singlePost.authorImage).url()} alt={singlePost.name} />
                         </div>
                     </div>
