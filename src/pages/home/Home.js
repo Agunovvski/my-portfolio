@@ -1,4 +1,5 @@
 import { DownloadOutlined, ReadOutlined } from '@ant-design/icons/lib/icons'
+import { BackTop } from 'antd'
 // import { Button } from 'antd'
 import React from 'react'
 import '../../assets/templateStyles.css'
@@ -54,6 +55,7 @@ export default function Home() {
                     />
                 </div>
             </div>
+            <BackTop></BackTop>
         </section>
     )
 }
