@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import Logo from '../../assets/images/logo'
 import { Button } from 'antd'
 import './NavStyles.css'
@@ -17,11 +18,11 @@ export default function Nav() {
                     {/* <Button type='link'>
                         <NavLink to='/my-work'>My work</NavLink>
                     </Button> */}
-                    <Button type='link'>
+                    <Button type='primary'>
                         <NavLink to='/post'>My work</NavLink>
                     </Button>
                     <Button type='link'>
-                        <NavLink to='/about'>About me</NavLink>
+                        <HashLink smooth to='/#about'>About me</HashLink>
                     </Button>
                 </div>
             </nav>
