@@ -3,7 +3,7 @@ header {
   padding: 0 16px;
   position: sticky;
   top: 0;
-  background-color: #3e4059;
+  background-color: rgba(62, 64, 89, 0.8);
 }
 
 .navigation {
