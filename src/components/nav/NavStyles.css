@@ -4,6 +4,7 @@ header {
   position: sticky;
   top: 0;
   background-color: rgba(62, 64, 89, 0.8);
+  z-index: 10000;
 }
 
 .navigation {
