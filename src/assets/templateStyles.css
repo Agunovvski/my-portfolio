@@ -1,3 +1,18 @@
+h1 {
+  font-size: 40px !important;
+  font-weight: bold !important;
+}
+
+h2 {
+  font-size: 32px !important;
+  font-weight: bold !important;
+}
+
+h3 {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
 .template-width {
   margin: 0 auto;
   max-width: 1200px;
