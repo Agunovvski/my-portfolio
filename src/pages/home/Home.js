@@ -1,7 +1,7 @@
 import { DownloadOutlined, ReadOutlined } from '@ant-design/icons/lib/icons'
 import { BackTop, Button } from 'antd'
 import { NavLink } from 'react-router-dom'
-// import { Button } from 'antd'
+import MyPhoto from '../../assets/images/work-self.png'
 import React from 'react'
 import '../../assets/templateStyles.css'
 import LearnMore from './components/LearnMore'
@@ -12,6 +12,10 @@ export default function Home() {
         <section>
             <div className='template-width'>
                 <div className='home-container'>
+                    <img className='home-image' src={MyPhoto} alt="self" style={{
+                        borderRadius: '50%',
+                        height: ' 20vh',
+                    }} />
                     <div className='title-container'>
                         <div>
                             <h1>Hi, <mark>Agung</mark> here.
@@ -52,7 +56,7 @@ export default function Home() {
                 </div>
             </div>
             <div className='template-width home-work'>
-                <h2>My work</h2>
+                <h2>My work.</h2>
                 <p>Have a look at some highlighted projects where the design process is captured and principle followed.</p>
                 <Button
                     type='primary'
