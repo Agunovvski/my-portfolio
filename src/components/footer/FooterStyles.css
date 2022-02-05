@@ -1,3 +1,10 @@
 .footer-section {
-  margin-top: 240px;
+  margin-top: 120px;
+  height: 160px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

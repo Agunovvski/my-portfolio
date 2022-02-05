@@ -1,5 +1,6 @@
 import { DownloadOutlined, ReadOutlined } from '@ant-design/icons/lib/icons'
-import { BackTop } from 'antd'
+import { BackTop, Button } from 'antd'
+import { NavLink } from 'react-router-dom'
 // import { Button } from 'antd'
 import React from 'react'
 import '../../assets/templateStyles.css'
@@ -13,26 +14,21 @@ export default function Home() {
                 <div className='home-container'>
                     <div className='title-container'>
                         <div>
-                            <h1>Hi, Agung here.
+                            <h1>Hi, <mark>Agung</mark> here.
                                 <br />
                                 Simply a UI/UX Designer
                             </h1>
-                            {/* <h1>Simply a UI/UX Designer.</h1> */}
                         </div>
                         <div>
                             <h3>Connecting the dots between user needs and business goals.</h3>
                             <h5>(Aaanndd probably fixing a syntax error as you are reading this.)</h5>
                         </div>
                     </div>
-                    {/* <div>
-                        <Button type='primary'>Browse portfolio</Button>
-                        <Button type='link'>About me</Button>
-                    </div> */}
                 </div>
                 <div className='home-container about-container' id='about'>
                     <h2>About me.</h2>
-                    <h2 className='intro'>With 3+ years of product development experience, I aim to create meaningful experiences for users to get their jobs done while reaching business goals.</h2>
-                    <h5>Get to know everything about me through my resume, the design process & principles I adhere to down below:</h5>
+                    <h2 className='intro'>With 3+ years of product development experience, I aim to create <mark>meaningful experiences</mark> for users to get their jobs done while reaching business goals.</h2>
+                    <p>Get to know everything about me through my resume, the design process & principles I adhere to down below:</p>
                 </div>
                 <div className='learn-section'>
                     <LearnMore
@@ -49,11 +45,21 @@ export default function Home() {
                     />
                     <LearnMore
                         title='Design principles.'
-                        description='I have 3 principles that I adhere to when creating meaninful products.'
+                        description='I have 3 principles that I adhere to when creating meaningful products.'
                         cta='Learn more'
                         icon={<ReadOutlined />}
                     />
                 </div>
+            </div>
+            <div className='template-width home-work'>
+                <h2>My work</h2>
+                <p>Have a look at some highlighted projects where the design process is captured and principle followed.</p>
+                <Button
+                    type='primary'
+                    size='large'
+                >
+                    <NavLink to='/post'>View my work</NavLink>
+                </Button>
             </div>
             <BackTop></BackTop>
         </section>
