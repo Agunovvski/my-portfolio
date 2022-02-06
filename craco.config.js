@@ -17,7 +17,9 @@ module.exports = {
                             '@btn-primary-color': '#3E4059', // blue
                             '@btn-font-weight': '600',
                             '@font-size-base': '16px',
-                            '@btn-border-radius-base': '8px'
+                            '@btn-border-radius-base': '8px',
+                            '@card-radius': '16px',
+                            '@card-background': '#2f3144'
                         },
                         javascriptEnabled: true,
                     },

@@ -1,5 +1,5 @@
 import { DownloadOutlined, ReadOutlined } from '@ant-design/icons/lib/icons'
-import { BackTop, Button } from 'antd'
+import { BackTop, Button, Tooltip } from 'antd'
 import { NavLink } from 'react-router-dom'
 import MyPhoto from '../../assets/images/work-self.png'
 import React from 'react'
@@ -65,7 +65,9 @@ export default function Home() {
                     <NavLink to='/post'>View my work</NavLink>
                 </Button>
             </div>
-            <BackTop></BackTop>
+            <Tooltip title='Back to top'>
+                <BackTop></BackTop>
+            </Tooltip>
         </section>
     )
 }
