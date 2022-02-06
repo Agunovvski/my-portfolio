@@ -18,10 +18,10 @@ export default function Nav() {
                     {/* <Button type='link'>
                         <NavLink to='/my-work'>My work</NavLink>
                     </Button> */}
-                    <Button size='large' type='link'>
+                    <Button size='middle' type='link'>
                         <HashLink smooth to='/#about'>About me</HashLink>
                     </Button>
-                    <Button size='large' type='primary'>
+                    <Button size='middle' type='primary'>
                         <NavLink to='/post'>My work</NavLink>
                     </Button>
                 </div>

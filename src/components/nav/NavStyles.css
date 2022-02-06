@@ -12,3 +12,15 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 24px;
+  }
+}

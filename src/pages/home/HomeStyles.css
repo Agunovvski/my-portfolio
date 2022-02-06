@@ -72,7 +72,7 @@ mark {
 }
 
 .learn-section {
-  margin-top: 56px;
+  margin-top: 96px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 24px;
@@ -87,8 +87,52 @@ mark {
 }
 
 .home-work {
-  margin-top: 120px;
+  margin-top: 160px;
   background-color: #2f3144;
   padding: 24px;
   border-radius: 16px;
+}
+
+/* breakpoints */
+
+@media screen and (max-width: 1024px) {
+  .title-container {
+    flex-direction: column;
+  }
+
+  .title-container div {
+    display: block;
+    width: 100%;
+  }
+
+  .home-container {
+    min-height: 480px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .learn-section {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .home-container {
+    height: 600px !important;
+  }
+
+  .about-container {
+    height: 600px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .learn-section {
+    grid-template-columns: 1fr;
+    row-gap: 72px;
+  }
+
+  .about-container {
+    margin-top: 280px;
+  }
 }

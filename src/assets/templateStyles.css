@@ -24,6 +24,20 @@ section {
   margin-top: 40px;
 }
 
+/* Breakpoints */
+
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding: 24px;
+  }
+}
+
 /* antd styles override */
 
 .ant-card {
