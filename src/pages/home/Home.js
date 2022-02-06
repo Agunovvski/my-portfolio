@@ -20,7 +20,7 @@ export default function Home() {
                         <div>
                             <h1>Hi, <mark>Agung</mark> here.
                                 <br />
-                                Simply a UI/UX Designer
+                                Simply a UI/UX Designer.
                             </h1>
                         </div>
                         <div>
