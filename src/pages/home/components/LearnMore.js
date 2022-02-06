@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../assets/templateStyles.css'
 import { Button } from 'antd';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function LearnMore(props) {
 
@@ -19,7 +19,7 @@ export default function LearnMore(props) {
             <p>{props.description}</p>
         </div>
         <Button size=' small' type='link' icon={props.icon} style={buttonStyle}>
-            <Link style={linkStyle} to={props.link}>{props.cta}</Link>
+            <NavLink style={linkStyle} to={props.link}>{props.cta}</NavLink>
         </Button>
     </div>;
 }
