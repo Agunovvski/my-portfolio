@@ -33,6 +33,9 @@ export default function Footer() {
                     <Button type='link' icon={<LinkedinFilled />} />
                 </div>
             </footer>
+            <div className='template-width credits'>
+                <h5>Website written by me using React.JS and Sanity.io</h5>
+            </div>
         </section>
     )
 }

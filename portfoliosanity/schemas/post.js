@@ -39,22 +39,37 @@ export default {
     {
       name: 'projectType',
       title: 'Project type (meta)',
-      type: 'string',
-      options: {
-        list: [
-          {
-            value: 'Personal',
-            title: 'Personal',
-          },
-          {
-            value: 'Client',
-            title: 'Client',
-          },
-          {
-            value: 'School',
-            title: 'School',
-          }
+      // type: 'string',
+      // options: {
+      //   list: [
+      //     {
+      //       value: 'Personal',
+      //       title: 'Personal',
+      //     },
+      //     {
+      //       value: 'Client',
+      //       title: 'Client',
+      //     },
+      //     {
+      //       value: 'School',
+      //       title: 'School',
+      //     },
+      //     {
+      //       value: 'Work',
+      //       title: 'Work',
+      //     },
+      //   ]
+      // }
+      type: 'array',
+      of: [{
+        type: 'string',
+        to: [
+          { type: 'Work' },
+          { type: 'Personal' },
         ]
+      }],
+      options: {
+        layout: 'tags'
       }
     },
     {
