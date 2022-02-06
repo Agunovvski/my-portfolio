@@ -36,7 +36,7 @@
 
 .singlepost-blockContent {
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 75%;
 }
 
 .singlepost-blockContent p,
@@ -62,4 +62,10 @@ figure {
 
 figure img {
   max-width: inherit;
+}
+
+@media screen and (max-width: 480px) {
+  .singlepost-blockContent {
+    max-width: 100%;
+  }
 }

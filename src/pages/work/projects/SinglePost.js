@@ -27,6 +27,7 @@ export default function SinglePost() {
             slug,
             projectType,
             releaseDate,
+            imagesGallery,
             mainImage{
                 asset->{
                     _id,

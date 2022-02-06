@@ -40,18 +40,21 @@ export default function Home() {
                         description='Dive deep in my experiences in detail up until now!'
                         cta='The usual, download..'
                         icon={<DownloadOutlined />}
+                        link='/design-process'
                     />
                     <LearnMore
                         title='Design process.'
                         description='3 main steps during the projects I follow.'
                         cta='Learn more'
                         icon={<ReadOutlined />}
+                        link='/design-process'
                     />
                     <LearnMore
                         title='Design principles.'
                         description='I have 3 principles that I adhere to when creating meaningful products.'
                         cta='Learn more'
                         icon={<ReadOutlined />}
+                        link='/design-principles'
                     />
                 </div>
             </div>
