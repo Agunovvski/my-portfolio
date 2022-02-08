@@ -1,11 +1,11 @@
 import { DownloadOutlined, ReadOutlined } from '@ant-design/icons/lib/icons'
-import { BackTop, Button, Tooltip } from 'antd'
-import { NavLink } from 'react-router-dom'
+import { BackTop, Tooltip } from 'antd'
 import MyPhoto from '../../assets/images/work-self.png'
 import React from 'react'
 import '../../assets/templateStyles.css'
 import LearnMore from './components/LearnMore'
 import './HomeStyles.css'
+import MyWorkBanner from './components/MyWorkBanner'
 
 export default function Home() {
     return (
@@ -58,16 +58,12 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div className='template-width home-work'>
-                <h2>My work.</h2>
-                <p>Have a look at some highlighted projects where the design process is captured and principle followed.</p>
-                <Button
-                    type='primary'
-                    size='large'
-                >
-                    <NavLink to='/post'>View my work</NavLink>
-                </Button>
-            </div>
+            <MyWorkBanner
+                title='My work.'
+                description='Have a look at some highlighted projects where the design process is captured and principle followed.'
+                cta='View my work'
+            >
+            </MyWorkBanner>
             <Tooltip title='Back to top'>
                 <BackTop></BackTop>
             </Tooltip>

@@ -1,9 +1,10 @@
-import { Breadcrumb, Card, List, Tag, Timeline } from 'antd';
+import { Breadcrumb, Card, Divider, List, Tag, Timeline } from 'antd';
 import BreadcrumbItem from 'antd/lib/breadcrumb/BreadcrumbItem';
 import TimelineItem from 'antd/lib/timeline/TimelineItem';
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../assets/templateStyles.css'
+import MyWorkBanner from '../home/components/MyWorkBanner';
 import './ProcessStyles.css'
 
 export default function Process() {
@@ -115,6 +116,12 @@ export default function Process() {
                     </List>
                 </Card>
             </div>
+            <Divider />
+            <MyWorkBanner
+                title='My work.'
+                description='Dive deep in my work to see the design process in action'
+                cta='View my work'
+            ></MyWorkBanner>
         </div>
 
     </section >;
