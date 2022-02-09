@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Breadcrumb, Card, Divider } from 'antd';
+import { Breadcrumb, Card, Divider, Steps } from 'antd';
 import BreadcrumbItem from 'antd/lib/breadcrumb/BreadcrumbItem';
 import { Link } from 'react-router-dom';
 import MyWorkBanner from '../home/components/MyWorkBanner';
@@ -12,6 +12,10 @@ export default function Principles() {
         window.scrollTo(0, 0)
     }, [])
 
+    // Steps
+
+    const { Step } = Steps;
+
     return <section>
         <div className='template-width'>
             <Breadcrumb>
@@ -20,6 +24,28 @@ export default function Principles() {
                 </BreadcrumbItem>
             </Breadcrumb>
             <h1>Design principles.</h1>
+            <p>Working in this subjective field every designer has their own views of what design should follow. Here are some of my main Design Principles I adhere to when it comes to good design: </p>
+            <div className='steps-container'>
+                <h3>Good design</h3>
+                <Steps labelPlacement='vertical'>
+                    <Step
+                        status='In Progress'
+                        title='has good reasoning'
+                    ></Step>
+                    <Step
+                        status='In Progress'
+                        title='is never done'
+                    ></Step>
+                    <Step
+                        status='In Progress'
+                        title='gets the job done'
+                    ></Step>
+                    <Step
+                        status='In Progress'
+                        title='is accessible'
+                    ></Step>
+                </Steps>
+            </div>
             <div className='principles-container'>
                 <Card>
                     <h2>Title</h2>
@@ -28,8 +54,8 @@ export default function Principles() {
             </div>
             <Divider />
             <MyWorkBanner
-                title='My work.'
-                description='Dive deep in my work to see the design principles in action'
+                title='Design Principles in action.'
+                description='Dive deep in my work to see the design principles in action!'
                 cta='View my work'
             ></MyWorkBanner>
         </div>

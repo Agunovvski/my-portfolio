@@ -6,8 +6,16 @@ import '../../assets/templateStyles.css'
 import LearnMore from './components/LearnMore'
 import './HomeStyles.css'
 import MyWorkBanner from './components/MyWorkBanner'
+import { useEffect } from 'react'
 
 export default function Home() {
+
+
+    // scroll to the top on render
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <section>
             <div className='template-width'>
@@ -51,7 +59,7 @@ export default function Home() {
                     />
                     <LearnMore
                         title='Design principles.'
-                        description='I have 3 principles that I adhere to when creating meaningful products.'
+                        description='I have 4 principles that I adhere to when creating meaningful products.'
                         cta='Learn more'
                         icon={<ReadOutlined />}
                         link='/design-principles'
@@ -60,7 +68,7 @@ export default function Home() {
             </div>
             <MyWorkBanner
                 title='My work.'
-                description='Have a look at some highlighted projects where the design process is captured and principle followed.'
+                description='Have a look at how the design process and principles work in action in my work.'
                 cta='View my work'
             >
             </MyWorkBanner>

@@ -148,8 +148,8 @@ export default function Process() {
             </div>
             <Divider />
             <MyWorkBanner
-                title='My work.'
-                description='Dive deep in my work to see the design process in action'
+                title='Design process in action.'
+                description='Dive deep in my work to see the design process in action!'
                 cta='View my work'
             ></MyWorkBanner>
         </div>
