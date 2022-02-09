@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Breadcrumb, Divider } from 'antd';
+import { Breadcrumb, Card, Divider } from 'antd';
 import BreadcrumbItem from 'antd/lib/breadcrumb/BreadcrumbItem';
 import { Link } from 'react-router-dom';
 import MyWorkBanner from '../home/components/MyWorkBanner';
@@ -21,7 +21,10 @@ export default function Principles() {
             </Breadcrumb>
             <h1>Design principles.</h1>
             <div className='principles-container'>
-
+                <Card>
+                    <h2>Title</h2>
+                    <p>Description</p>
+                </Card>
             </div>
             <Divider />
             <MyWorkBanner
