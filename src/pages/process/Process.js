@@ -24,30 +24,39 @@ export default function Process() {
         'Participant observation',
         'Card sorting',
         'Online analytics',
+        'Field research',
+        'Empathy map',
+        'Persona'
     ]
 
     const defineList = [
-        'Interviews',
-        'Customer Journey',
-        'Participant observation',
-        'Card sorting',
-        'Online analytics',
+        'Job Stories',
+        'Product Alignment Document',
+        'How might we..?',
     ]
 
     const ideateList = [
-        'Interviews',
-        'Customer Journey',
-        'Participant observation',
+        'Good & Bad practice search',
+        'Competitor Analysis',
+        'Trend Analysis',
+        'Benchmarking',
+        'Crazy 8s',
+        'Sketchstorming',
+        'Co-creation',
+        'Morphological chart',
+        'Scamper',
         'Card sorting',
-        'Online analytics',
+        'Morphological chart'
     ]
 
     const iterateList = [
-        'Interviews',
-        'Customer Journey',
-        'Participant observation',
-        'Card sorting',
-        'Online analytics',
+        'Prototyping',
+        'Usability Testing',
+        'A/B Testing',
+        'Beta Testing',
+        'Online Analytics',
+        'KPIs',
+        'Success metrics'
     ]
 
     return <section>
@@ -86,7 +95,7 @@ export default function Process() {
                     bordered={false}
                 >
                     <h3>Define</h3>
-                    <p>This is the first thing to consider when starting out any project: understanding the users, their needs, and problems.</p>
+                    <p>In this phase we define the design challenge / problem based on the insights that the data delivers.</p>
                     <h5>Favorite metholodogies:</h5>
                     <List itemLayout='horizontal' dataSource={defineList} renderItem={item => (
                         <Tag>{item}</Tag>
@@ -97,7 +106,7 @@ export default function Process() {
                     bordered={false}
                 >
                     <h3>Ideate</h3>
-                    <p>This is the first thing to consider when starting out any project: understanding the users, their needs, and problems.</p>
+                    <p>The (fun) part where creativity comes into play. From brainstorming & Lo-Fi sketches to a Hi-Fi prototypes.</p>
                     <h5>Favorite metholodogies:</h5>
                     <List itemLayout='horizontal' dataSource={ideateList} renderItem={item => (
                         <Tag>{item}</Tag>
@@ -108,7 +117,7 @@ export default function Process() {
                     bordered={false}
                 >
                     <h3>Iterate</h3>
-                    <p>This is the first thing to consider when starting out any project: understanding the users, their needs, and problems.</p>
+                    <p>A design is never really done. Over time things change, the business changes so there is always room for improvement. This phase is a continious loop where we take feedback from either the live product or prototype and iterate based on user feedback.</p>
                     <h5>Favorite metholodogies:</h5>
                     <List itemLayout='horizontal' dataSource={iterateList} renderItem={item => (
                         <Tag>{item}</Tag>

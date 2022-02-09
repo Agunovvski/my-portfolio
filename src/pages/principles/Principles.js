@@ -3,6 +3,7 @@ import { Breadcrumb, Divider } from 'antd';
 import BreadcrumbItem from 'antd/lib/breadcrumb/BreadcrumbItem';
 import { Link } from 'react-router-dom';
 import MyWorkBanner from '../home/components/MyWorkBanner';
+import './PrinciplesStyles.css'
 
 export default function Principles() {
 
@@ -19,6 +20,9 @@ export default function Principles() {
                 </BreadcrumbItem>
             </Breadcrumb>
             <h1>Design principles.</h1>
+            <div className='principles-container'>
+
+            </div>
             <Divider />
             <MyWorkBanner
                 title='My work.'
