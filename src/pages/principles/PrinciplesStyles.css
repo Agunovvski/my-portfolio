@@ -1,3 +1,9 @@
 .steps-container {
   margin: 56px 0;
 }
+
+.principles-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+}
