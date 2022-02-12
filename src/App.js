@@ -1,5 +1,5 @@
 import React from 'react'
-import './assets/App.less';
+import './App.less';
 import './assets/templateStyles.css'
 
 import Nav from './components/nav/Nav'
