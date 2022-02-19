@@ -52,7 +52,7 @@ export default function Home() {
                     />
                     <LearnMore
                         title='Design process.'
-                        description='3 main steps during the projects I follow.'
+                        description='4 main steps during the projects I follow.'
                         cta='Learn more'
                         icon={<ReadOutlined />}
                         link='/design-process'
