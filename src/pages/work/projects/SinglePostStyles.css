@@ -43,6 +43,23 @@
   margin-left: 16px;
 }
 
+.singlepost-blockContent blockquote {
+  background: #2f3144;
+  border-radius: 2px;
+  border-left: 2px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+.singlepost-blockContent blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
 /* .singlepost-blockContent p,
 .singlepost-blockContent ul,
 .singlepost-blockContent ol,
