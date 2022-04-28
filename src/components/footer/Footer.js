@@ -29,8 +29,8 @@ export default function Footer() {
                     </Tooltip>
                 </div>
                 <div>
-                    <Button type='link' icon={<GithubFilled />} />
-                    <Button type='link' icon={<LinkedinFilled />} />
+                    <Button type='link' target='_blank' href='https://github.com/Agunovvski' icon={<GithubFilled />} />
+                    <Button type='link' target='_blank' href='' icon={<LinkedinFilled />} />
                 </div>
             </footer>
             <div className='template-width credits'>

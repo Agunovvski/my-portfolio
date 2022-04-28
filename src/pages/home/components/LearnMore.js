@@ -18,8 +18,15 @@ export default function LearnMore(props) {
             <h3>{props.title}</h3>
             <p>{props.description}</p>
         </div>
-        <Button size=' small' type='link' icon={props.icon} style={buttonStyle}>
-            <NavLink style={linkStyle} to={props.link}>{props.cta}</NavLink>
-        </Button>
+        {props.link === '/design-process' || props.link === '/design-principles'
+            ?
+            <Button size='small' type='link' icon={props.icon} style={buttonStyle}>
+                <NavLink style={linkStyle} to={props.link}>{props.cta}</NavLink>
+            </Button>
+            :
+            <Button size='small' type='link' icon={props.icon} style={buttonStyle} href={props.link} target='_blank'>
+                {props.cta}
+            </Button>
+        }
     </div>;
 }

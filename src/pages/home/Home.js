@@ -48,7 +48,7 @@ export default function Home() {
                         description='Dive deep in my experiences in detail up until now!'
                         cta='The usual, download..'
                         icon={<DownloadOutlined />}
-                        link='/design-process'
+                        link='https://cdn.sanity.io/files/ispob9gx/production/5f0fbff2ef50ca323982718b2fdecccdc17c244e.pdf'
                     />
                     <LearnMore
                         title='Design process.'
