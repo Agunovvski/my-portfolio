@@ -30,7 +30,7 @@ export default function Footer() {
                 </div>
                 <div>
                     <Button type='link' target='_blank' href='https://github.com/Agunovvski' icon={<GithubFilled />} />
-                    <Button type='link' target='_blank' href='' icon={<LinkedinFilled />} />
+                    <Button type='link' target='_blank' href='https://www.linkedin.com/in/agungtarumampen/' icon={<LinkedinFilled />} />
                 </div>
             </footer>
             <div className='template-width credits'>
