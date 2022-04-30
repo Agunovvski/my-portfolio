@@ -6,7 +6,7 @@ import BlockContent from '@sanity/block-content-to-react'
 
 import './SinglePostStyles.css'
 
-import { Skeleton, Breadcrumb, Avatar, Image, Statistic, Divider } from 'antd'
+import { Skeleton, Breadcrumb, Avatar, Image, Statistic, Divider, BackTop, Tooltip } from 'antd'
 
 const builder = imageUrlBuilder(sanityClient)
 
@@ -27,6 +27,7 @@ export default function SinglePost() {
             slug,
             projectType,
             releaseDate,
+            imagesGallery,
             mainImage{
                 asset->{
                     _id,
@@ -100,6 +101,9 @@ export default function SinglePost() {
                     <BlockContent blocks={singlePost.body} projectId='ispob9gx' dataset='production'></BlockContent>
                 </div>
             </div>
+            <Tooltip title='Back to top'>
+                <BackTop></BackTop>
+            </Tooltip>
         </section>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import sanityClient from '../../../client.js'
 import { Link } from 'react-router-dom'
 import './PostStyles.css'
-import { Card, Skeleton } from 'antd'
+import { Card, Skeleton, Tag } from 'antd'
 
 export default function Post() {
 
@@ -46,6 +46,7 @@ export default function Post() {
 
     // const { Meta } = Card;
 
+
     return (
         <section>
             <div className='template-width'>
@@ -54,14 +55,18 @@ export default function Post() {
                     {postData && postData.map((post, index) => (
                         <Link to={'/post/' + post.slug.current} key={post.slug.current}>
                             <Card
+                                className='post-card'
                                 loading={cardLoad}
                                 hoverable='true'
                                 cover={
                                     <img className='project-img' src={post.mainImage.asset.url} alt={post.mainImage.alt} />
                                 }
                             >
+                                {/* <Tag>{post.projectType}</Tag> */}
+                                {post.projectType.map((tag, index) => (
+                                    <Tag>{tag}</Tag>
+                                ))}
                                 <h2>{post.title}</h2>
-                                <span>{post.projectType}</span>
                                 <p>{post.description}</p>
                             </Card>
                         </Link>

@@ -2,13 +2,35 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 32px;
+  animation: fadeIn 0.3s ease-in;
 }
 
-/* .grid-projects > article {
-  width: 100%;
-} */
+.post-card {
+  height: 100%;
+}
 
 .project-img {
   height: 320px;
   width: 100%;
+}
+
+/* animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* breakpoints */
+
+@media screen and (max-width: 768px) {
+  .grid-projects {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+    column-gap: 32px;
+  }
 }

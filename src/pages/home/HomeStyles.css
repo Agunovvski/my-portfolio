@@ -1,0 +1,138 @@
+mark {
+  background-color: transparent;
+  color: #8bb19c;
+  padding: 0;
+}
+
+.home-image {
+  animation: MoveUpDown 1.5s 1.2s linear infinite, fadeIn 0.3s ease-in;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 70vh;
+  justify-content: flex-end;
+  /* margin-bottom: 80px; */
+}
+
+.title-container {
+  animation: fadeIn 0.8s ease-in;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.title-container div {
+  display: inline-block;
+  width: 45%;
+}
+
+.title-container div:nth-of-type(2) {
+  display: flex !important;
+  height: 85%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-container div:nth-of-type(2) h3 {
+  font-weight: 400 !important;
+}
+
+.about-container {
+  height: 60vh !important;
+}
+
+.intro {
+  font-weight: 400 !important;
+}
+
+.learn-section {
+  margin-top: 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 24px;
+}
+
+.learn-more-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.home-work {
+  margin-top: 160px;
+  background-color: #2f3144;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+/* breakpoints */
+
+@media screen and (max-width: 1024px) {
+  .title-container {
+    flex-direction: column;
+  }
+
+  .title-container div {
+    display: block;
+    width: 100%;
+  }
+
+  .home-container {
+    min-height: 480px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .learn-section {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .home-container {
+    height: 600px !important;
+  }
+
+  .about-container {
+    height: 600px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .learn-section {
+    grid-template-columns: 1fr;
+    row-gap: 72px;
+  }
+
+  .about-container {
+    margin-top: 280px;
+  }
+}
