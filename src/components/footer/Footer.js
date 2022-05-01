@@ -23,8 +23,8 @@ export default function Footer() {
             <footer className='template-width'>
                 <div>
                     <Tooltip placement='top' title={isCopied === true ? 'Copied to clipboard!' : 'Copy to clipboard'} >
-                        <CopyToClipboard text='applewackjack@gmail.com' onCopy={copyFunction}>
-                            <Button icon={<CopyFilled />} type='link'>applewackjack@gmail.com</Button>
+                        <CopyToClipboard text='indoside@live.nl' onCopy={copyFunction}>
+                            <Button icon={<CopyFilled />} type='link'>indoside@live.nl</Button>
                         </CopyToClipboard>
                     </Tooltip>
                 </div>
