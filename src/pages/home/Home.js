@@ -28,7 +28,7 @@ export default function Home() {
                         <div>
                             <h1>Hi, <mark>Agung</mark> here.
                                 <br />
-                                Simply a UI/UX Designer.
+                                Product Designer.
                             </h1>
                         </div>
                         <div>
